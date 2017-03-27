@@ -1,0 +1,1 @@
+DEBUG=scrape:* npm start

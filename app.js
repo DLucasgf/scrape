@@ -10,6 +10,8 @@ var users = require('./routes/users');
 
 var scielo = require('./routes/scielo');
 var scieloResults = require('./routes/scieloResults');
+var scieloCsv = require('./routes/scieloCsv');
+var scieloGetCsv = require('./routes/scieloGetCsv');
 
 var researchgate = require('./routes/researchgate');
 
@@ -32,6 +34,8 @@ app.use('/users', users);
 
 app.use('/scielo', scielo);
 app.use('/scieloresults', scieloResults);
+app.use('/scielocsv', scieloCsv);
+app.use('/scielogetcsv', scieloGetCsv);
 
 app.use('/researchgate', researchgate);
 

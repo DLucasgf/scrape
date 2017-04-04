@@ -12,6 +12,7 @@ var scielo = require('./routes/scielo');
 var scieloResults = require('./routes/scieloResults');
 var scieloCsv = require('./routes/scieloCsv');
 var scieloGetCsv = require('./routes/scieloGetCsv');
+var scieloTmp = require('./routes/scieloTmp');
 
 var researchgate = require('./routes/researchgate');
 
@@ -36,6 +37,7 @@ app.use('/scielo', scielo);
 app.use('/scieloresults', scieloResults);
 app.use('/scielocsv', scieloCsv);
 app.use('/scielogetcsv', scieloGetCsv);
+app.use('/scielotmp', scieloTmp);
 
 app.use('/researchgate', researchgate);
 

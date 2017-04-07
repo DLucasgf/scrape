@@ -15,6 +15,7 @@
     "serve-favicon": "~2.3.2",
     "request"     : "latest",
     "cheerio"     : "latest",
+    "mongodb" : "2.2.25",
     "sleep"     : "latest",
     "csvtojson" : "1.1.4",
     "puid" : "1.0.7",

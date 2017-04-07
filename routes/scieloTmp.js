@@ -4,6 +4,8 @@ var url = require('url');
 var fs = require('fs');
 var csv = require('csvtojson');
 
+var mongoConn = require('../js/mongo');
+
 var router = express.Router();
 
 /* GET home page. */
@@ -40,12 +42,29 @@ router.get('/', function(req, res, next) {
           //console.log(jsonResult);
         })
         .on('done', (error) => {
-          console.log('end');
-          console.log(jsonResult);
+          //console.log('end');
+          //console.log(jsonResult);
 
+          var db;
+          
+          /*mongoConn.connect(function(db) {
+            console.log('db');
+            console.log(db);
+            mongoConn.insertDocuments(jsonResult, db, function() {
+            db.close();
+          });
+          });
+          console.log('db2');
+          console.log(db);*/
+          mongoConn.insertDocuments(jsonResult, function() {
+            console.log('close');
+            db.close();
+          });
+          //mongoConn.close(db);
+/*
           fs.writeFile('scielocsv/tmp/' + file + '.json', JSON.stringify(jsonResult, null, 4), function(err) {
             console.log('Arquivo ' + file + ' salvo');
-          });
+          });*/
         });
     });
     //arquivosCsv = files;

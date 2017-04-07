@@ -1,0 +1,1 @@
+"/c/Program Files/MongoDB/Server/3.4/bin/mongod.exe" --dbpath=/c/Users/Lucas/Documents/git/scrape/mongodb
